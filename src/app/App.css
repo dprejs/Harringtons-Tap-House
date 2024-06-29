@@ -37,7 +37,7 @@
   color: white;
 }
 .App-header img {
-  margin-top: -20px;
+  margin-top: -25px;
 }
 
 .Secondary-text {
@@ -48,6 +48,7 @@
 }
 .carousel {
   margin-top: 10px;
+  margin-bottom: 10px;
   height: 205px;
 }
 .height-100 {
