@@ -1,10 +1,15 @@
 import Image from "next/image";
 import ImgCarousel from "./swipeImg";
 import { Box } from "@mui/material";
+import localFont from 'next/font/local';
+
+const pittSerif = localFont({src: './Pittsbrook Serif.otf'});
+const alessEB = localFont({src: './Alesand Extra Bold.otf'});
+
 export default function Home() {
   return (
 <div className="App">
-      <header className="App-header">
+      <header className={"App-header " + pittSerif.className}>
         <Image src="/Harringtons_Primary-Logo.png" priority={true} height={302} width={302} alt="Logo"/>
         <div>
             Coming Soon <br/>
@@ -17,10 +22,10 @@ export default function Home() {
         alignItems="center"
         flexDirection="column"
         >
-          <div className='Secondary-text'>
+          <div className={'Secondary-text ' + alessEB.className}>
             2711 E Larkin Dr
           </div>
-          <div className='Secondary-text'>
+          <div className={'Secondary-text ' + alessEB.className}>
             Meanwhile Come visit us at <br/>
             <a  href="https://highaltitudehomebrew.com/">High Altitude Home Brew Supply</a><br/>
             And get some drinks to go or brew supplies<br/>
