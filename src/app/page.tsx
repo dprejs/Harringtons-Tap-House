@@ -9,10 +9,8 @@ const alessEB = localFont({src: './Alesand Extra Bold.otf'});
 
 export default function Home() {
   return (
-<div className="App">
-      <header className={"App-header " + pittSerif.className}>
-        <Image src="/Harringtons_Horizontal-Logo-White.png" priority={true} height={302} width={302} alt="Text Logo: Harrington's Tap House"/>
-      </header>
+<div className="App home">
+
       <div className="body">
         <Box
         display="flex"
