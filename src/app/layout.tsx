@@ -17,7 +17,7 @@ export default function RootLayout({
       <Head>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <body suppressHydrationWarning={true} className="height-100 width-100 body">{children}</body>
+      <body suppressHydrationWarning={true} className="height-100 width-100 margin-0">{children}</body>
     </html>
   );
 }
