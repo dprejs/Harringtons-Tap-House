@@ -23,13 +23,13 @@ export default function Home() {
         flexDirection="column"
         >
           <div className={'Secondary-text ' + alessEB.className}>
-            2711 E Larkin Dr
+            2711 E Lakin Dr
           </div>
           <div className={'Secondary-text ' + alessEB.className}>
             Meanwhile Come visit us at <br/>
             <a  href="https://highaltitudehomebrew.com/">High Altitude Home Brew Supply</a><br/>
             And get some drinks to go or brew supplies<br/>
-            2711 E Larkin Dr<br/>
+            2711 E Lakin Dr<br/>
             Tues -Sat, 10am - 6pm<br/>
           </div>
           <ImgCarousel />
