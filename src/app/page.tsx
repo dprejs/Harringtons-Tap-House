@@ -26,8 +26,8 @@ export default function Home() {
             2711 E Lakin Dr, Flagstaff, AZ 86004
             </Link>
             <br/>
-            <a href="tel: +19254216586">
-              925-421-6586
+            <a href="tel: +19284404410">
+              928-440-4410
             </a>
           </div>
           <div className={'Secondary-text ' + alessEB.className}>
@@ -57,7 +57,8 @@ export default function Home() {
           flex-direction="row"
           alignItems="center"
           gap="0px 30px"
->
+          >
+            <Link href="/menu">
             <button  className={"button button-white " + alessEB.className}>
               <Image src="hops_empty_pb.svg"
               height="40"
@@ -67,8 +68,12 @@ export default function Home() {
               Tap Menu
               </span>
             </button>
+
+            </Link>
             <Image src="/Harringtons_Primary-Logo.png" alt="Harrington's Tap House primary round logo" width="100" height="100"/>
-            <button className={"button button-blue " + alessEB.className}>
+
+            <button
+            className={"button button-blue " + alessEB.className}>
             <Image src="hops_empty_white.svg"
               height="40"
               width="40"
