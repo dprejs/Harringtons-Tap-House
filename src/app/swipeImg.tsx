@@ -48,6 +48,12 @@ let aspect2 = 225;
 const images = [
   {
     label: "bar construction",
+    imgPath: '/construction/PXL_20240717_000810528.jpg',
+    height: aspect2,
+    width: aspect1,
+  },
+  {
+    label: "bar construction",
     imgPath: '/construction/01686747-EEAF-4564-9648-F7A89B11663B.jpg',
     height: aspect2,
     width: aspect1,
