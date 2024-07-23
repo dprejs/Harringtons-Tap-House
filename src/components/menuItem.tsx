@@ -1,10 +1,16 @@
+"use client"
 import Image from "next/image"
 import localFont from 'next/font/local';
+import { useState } from "react";
 
 const alessEB = localFont({src: '../app/Alesand Extra Bold.otf'});
 
 
-export default function MenuItem (props) {
+export default function MenuItem ({props}) {
+  const [showDetails, setShowDetails] = useState(false);
+  const toggleDetails = () => {
+    setShowDetails(!showDetails)
+  }
   return (
     <div className={"menu-card " + alessEB.className}>
       <Image
@@ -14,15 +20,24 @@ export default function MenuItem (props) {
       height="50"
       className="menu-image"
       />
-      <div className="menu-name">
-        Tower Station
+      <div className="menu-text">
+        <div className="menu-primary">
+          <span className="menu-name">
+            {props.name}
+          </span>
+          <span>{props.style}</span>
+        </div>
+        <div className="menu-secondary">
+          <span className="menu-brewery">{props.brewery}</span>
+          <span>{props.abv ? "•" : ""}</span>
+          <span>{props.abv} {props.abv ? "ABV" : ""}</span>
+          <span>{props.ibu ? "•" : ""}</span>
+          <span>{props.ibu} {props.ibu ? "IBU" : ""}</span>
+        </div>
+        <div className="menu-description">
+          {showDetails ? props.description : props.description.slice(0,100)} {props.description.length > 100 ? <span className="show-more" onClick={toggleDetails}>{showDetails ? "show less ▴" : "show more ▸"}</span> : null}
+        </div>
       </div>
-      <div className="menu-divider">|</div>
-      <div className="menu-brewery"> Mother Road</div>
-      <div className="menu-style">
-      IPA - American
-      </div>
-      <div className="menu-abv">7.3% ABV</div>
     </div>
   )
 }

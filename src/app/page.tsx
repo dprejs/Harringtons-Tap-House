@@ -83,7 +83,7 @@ export default function Home() {
               </span>
             </button>
           </Box>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.8208517064745!2d-111.60925912357517!3d35.21093107274278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d8f46ae8a23f5%3A0xaa750b8aa8473a43!2sHigh%20Altitude%20Home%20Brew%20Supply!5e0!3m2!1sen!2sus!4v1719878958008!5m2!1sen!2sus" height="400" style={{border: "0"}} loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.8208517064745!2d-111.60925912357517!3d35.21093107274278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d8f46ae8a23f5%3A0xaa750b8aa8473a43!2sHigh%20Altitude%20Home%20Brew%20Supply!5e0!3m2!1sen!2sus!4v1719878958008!5m2!1sen!2sus" height="350" style={{border: "0"}} loading="lazy"></iframe>
         </Box>
       </div>
     </div>
