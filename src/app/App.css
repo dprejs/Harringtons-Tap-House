@@ -1,8 +1,8 @@
 :root{
-  --primary-red: rgb(120, 59, 64);
-  --primary-blue: rgb(34, 54, 72);
-  --secondary-red: rgb(70, 19, 20);
-  --secondary-white: rgb(255, 255, 255);
+  --primary-red: #783b40;
+  --primary-blue: #223648;
+  --secondary-red: #461314;
+  --secondary-white: #ffffff;
 }
 @font-face{
   font-family: 'Pittsbrook Serif';
@@ -118,6 +118,11 @@ a {
   padding: 5px;
   /* width: 100vw; */
   }
+  .menuNav {
+    position: sticky;
+    top: 0px;
+    background-color: var(--primary-red);
+  }
 
 .menu-card {
   font-size: medium;
@@ -130,13 +135,14 @@ a {
   border-style: solid;
   border-color: white;
   display: grid;
-  grid-template-columns: 5px 50px  5px auto ;
+  grid-template-columns: 5px 75px  5px auto ;
   grid-template-rows: 7px  auto 7px ;
 }
 
 .menu-image{
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  align-self: center;
 }
 
 .menu-text {
@@ -155,10 +161,18 @@ a {
   font-size: 22px;
   margin-right: 10px;
 }
-.menu-secondary {
+.menu-primary {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+
+}
+.menu-secondary {
+  width: 100%;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-content: space-between; */
 }
 .menu-description {
   text-align: start;

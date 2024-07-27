@@ -1,13 +1,11 @@
 "use client"
-
-import type { Metadata } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import "./App.css";
 import Link from "next/link";
 import React from "react";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import { SwipeableDrawer } from "@mui/material";
+import { createTheme, SwipeableDrawer, ThemeProvider } from "@mui/material";
 
 export default function RootLayout({
   children,
@@ -18,6 +16,20 @@ export default function RootLayout({
   const toggleDrawer = (open: boolean) => {
       setDrawer(open);
   }
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#783b40',
+        dark: '#461314',
+        contrastText: '#ffffff'
+      },
+      secondary: {
+        main: '#223648',
+        contrastText: '#ffffff'
+      }
+
+    }
+  })
   return (
     <html lang="en" suppressHydrationWarning={true} className="height-100 width-100">
       <Head>
@@ -27,6 +39,7 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body suppressHydrationWarning={true} className="height-100 width-100 margin-0">
+      <ThemeProvider theme={theme}>
       <header className="App-header">
         <div className="header-left"></div>
         <Link href="/">
@@ -63,6 +76,8 @@ export default function RootLayout({
         </SwipeableDrawer>
       </header>
         {children}
+      </ThemeProvider>
+
       </body>
     </html>
   );

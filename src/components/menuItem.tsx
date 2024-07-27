@@ -13,6 +13,18 @@ export default function MenuItem ({props}) {
   }
   return (
     <div className={"menu-card " + alessEB.className}>
+      {props.img_url ?
+      <Image
+      src={props.img_url}
+      alt={`${props.name} image`}
+      width={100}
+      height={100}
+      style={{
+        width: '100%',
+        height: 'auto'
+      }}
+      className="menu-image"
+    /> :
       <Image
       src="/hops_filled_pr_white_hops.svg"
       alt="placeholder hops icon"
@@ -20,6 +32,7 @@ export default function MenuItem ({props}) {
       height="50"
       className="menu-image"
       />
+    }
       <div className="menu-text">
         <div className="menu-primary">
           <span className="menu-name">
