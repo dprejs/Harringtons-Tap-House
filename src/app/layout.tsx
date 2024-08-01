@@ -29,7 +29,7 @@ export default function RootLayout({
       }
 
     }
-  })
+  });
   return (
     <html lang="en" suppressHydrationWarning={true} className="height-100 width-100">
       <Head>
@@ -38,16 +38,16 @@ export default function RootLayout({
       <meta name="description" content="Harrington's tap house website and menu"/>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-      <body suppressHydrationWarning={true} className="height-100 width-100 margin-0">
       <ThemeProvider theme={theme}>
+      <body suppressHydrationWarning={true} className="height-100 width-100 margin-0">
       <header className="App-header">
         <div className="header-left"></div>
         <Link href="/">
         <Image
         src="/Harringtons_Horizontal-Logo-White.png"
         priority={true}
-        height={302}
-        width={302}
+        height={280}
+        width={280}
         alt="Text Logo: Harrington's Tap House"
         className="header-logo"
         />
@@ -76,9 +76,8 @@ export default function RootLayout({
         </SwipeableDrawer>
       </header>
         {children}
-      </ThemeProvider>
-
       </body>
+      </ThemeProvider>
     </html>
   );
 }

@@ -1,6 +1,7 @@
 import categoryIds from "@/components/categoryIds";
 import axios from "axios";
 import parseItem from "@/components/menuParse";
+import { related_object, item, parsedItem, images } from "@/components/types";
 
 export async function GET(req: Request) {
   const {searchParams} = new URL(req.url)
@@ -26,15 +27,17 @@ export async function GET(req: Request) {
   })
   const reqTime = Date.now()
   console.log(`req took: ${reqTime-start}`)
-  const images = {};
-  searchRes.data.related_objects.forEach((related_object) => {
+  const images: images  = {};
+  searchRes.data.related_objects.forEach((related_object: related_object) => {
     if (related_object.type === "IMAGE") {
-      images[related_object.id] = related_object.image_data.url;
-    }
+      if (related_object.image_data) {
+        images[related_object.id] = related_object.image_data.url;
+      }
+      }
   })
   const unfilteredItems = searchRes.data.objects
-  const instock_items = []
-  unfilteredItems.forEach((item) => {
+  const instock_items: item[] = []
+  unfilteredItems.forEach((item: item) => {
     if (item.item_data.visibility === "PRIVATE") {
       return;
     }
@@ -51,10 +54,11 @@ export async function GET(req: Request) {
     }
   })
   if(category === categoryIds.beer) {
-    const tapMenu = [];
-    const canMenu = [];
+    const tapMenu: parsedItem[] = [];
+    const canMenu: parsedItem[] = [];
     instock_items.forEach((item) => {
       const parsed = parseItem(item, images);
+
       if (parsed.category === "onTap") {
         tapMenu.push(parsed);
       } else {
@@ -65,7 +69,7 @@ export async function GET(req: Request) {
     console.log(`filter took: ${filterTime - reqTime} \n total time ${filterTime - start}`)
     return Response.json({tapMenu, canMenu});
   } else {
-    const parsedMenu = []
+    const parsedMenu: parsedItem[] = []
     instock_items.forEach((item) => {
       const parsed = parseItem(item,images);
       parsedMenu.push(parsed);

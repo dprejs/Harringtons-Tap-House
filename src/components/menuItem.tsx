@@ -2,11 +2,12 @@
 import Image from "next/image"
 import localFont from 'next/font/local';
 import { useState } from "react";
+import { parsedItem } from "./types";
 
 const alessEB = localFont({src: '../app/Alesand Extra Bold.otf'});
 
 
-export default function MenuItem ({props}) {
+export default function MenuItem ({props}: {props: parsedItem}) {
   const [showDetails, setShowDetails] = useState(false);
   const toggleDetails = () => {
     setShowDetails(!showDetails)

@@ -122,13 +122,43 @@ a {
     position: sticky;
     top: 0px;
     background-color: var(--primary-red);
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    text-decoration: underline;
+    margin-left: -5px;
+  }
+  .menuNav button {
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
+@media screen and (min-width: 800px) {
+  .menu-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .menu-card {
   font-size: medium;
   width: 95vw;
-  min-width: 350px;
-  max-width: 400px;
+  min-width: 280px;
+  max-width: 500px;
   background-color: var(--primary-blue);
   border-radius: 10px;
   border-width: 2px;

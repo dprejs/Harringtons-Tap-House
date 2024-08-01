@@ -1,6 +1,7 @@
 import categoryIds from "./categoryIds";
+import { images, item, parsedItem } from "./types";
 
-const parseItem = (item ,images) => {
+const parseItem = (item: item ,images: images): parsedItem => {
   const styleSearch = /(Style:).*/i.exec(item.item_data.description_plaintext);
     let style = "";
     const abvSearch = /(ABV:).*%/i.exec(item.item_data.description_plaintext);
@@ -37,8 +38,8 @@ const parseItem = (item ,images) => {
     } else {
       menuCategory = "bottles";
     }
-    let img_url = ""
-    if (item.item_data.image_ids && item.item_data.image_ids.length &&images[item.item_data.image_ids] ) {
+    let img_url: string | undefined = ""
+    if (item.item_data.image_ids && item.item_data.image_ids.length && images[item.item_data.image_ids[0]] ) {
       img_url = images[item.item_data.image_ids[0]];
     }
     const menuItem = {
