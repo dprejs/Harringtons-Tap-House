@@ -11,34 +11,16 @@ const images = [
   },
   {
     label: "Stock Jackhammer Construction Worker",
-    imgPath: '/bar-photos/barTop.jpg',
+    imgPath: "/bar-photos/barTop.jpg",
     height: 300,
     width: 400,
   },
   {
     label: "Stock Construction Workers Planning",
-    imgPath: '/bar-photos/barFrame.jpg',
+    imgPath: "/bar-photos/barFrame.jpg",
     height: 400,
     width: 300,
   },
-  // {
-  //   label: "Stock Construction Arguing",
-  //   imgPath: '/stock-images/trouble.png',
-  //   height: 192,
-  //   width: 288,
-  // },
-  // {
-  //   label: "Stock construction worker with walkie",
-  //   imgPath: '/stock-images/walkie.png',
-  //   height: 192,
-  //   width: 288,
-  // },
-  // {
-  //   label: "stock construction worker",
-  //   imgPath: '/stock-images/Shirtless.png',
-  //   height: 205,
-  //   width: 137,
-  // },
 ];
 
 function ImgCarousel() {
