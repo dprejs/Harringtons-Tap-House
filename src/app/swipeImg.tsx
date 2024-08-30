@@ -4,19 +4,19 @@ import Image from "next/image";
 import React from "react";
 const images = [
   {
-    label: "Stock Confident Contruction worker",
+    label: "Photo of bartop with finished epoxy pour",
     imgPath: "/bar-photos/epoxyBar.jpg",
     height: 300,
     width: 400,
   },
   {
-    label: "Stock Jackhammer Construction Worker",
+    label: "Installing the bar top on the bar",
     imgPath: "/bar-photos/barTop.jpg",
     height: 300,
     width: 400,
   },
   {
-    label: "Stock Construction Workers Planning",
+    label: "Bar frame finished construction",
     imgPath: "/bar-photos/barFrame.jpg",
     height: 400,
     width: 300,
