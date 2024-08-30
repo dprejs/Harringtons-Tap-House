@@ -17,9 +17,9 @@ export default function Home() {
         alignItems="center"
         flexDirection="column"
         >
-          <div className={"Secondary-header " + alessEB.className}>
+          {/* <div className={"Secondary-header " + alessEB.className}>
             Craft Beer House
-          </div>
+          </div> */}
           <div className={'Secondary-text ' + alessEB.className}>
             <Link href="https://maps.app.goo.gl/bUBahW6E7mSujU6s9"
             >
@@ -36,7 +36,7 @@ export default function Home() {
             gap="0px 15px"
             justifyContent="space-evenly"
             >
-              <span>sunday - Monday </span>
+              <span>Monday </span>
               <span> | </span>
               <span >Closed</span>
             </Box>
@@ -44,8 +44,9 @@ export default function Home() {
             display="flex"
             gap="0px 15px"
             justifyContent="space-evenly"
+            marginBottom="10px"
             >
-              <span>Tuesday - saturday</span>
+              <span>Tuesday - Sunday</span>
               <span>|</span>
               <span>12pm - 10pm</span>
             </Box>

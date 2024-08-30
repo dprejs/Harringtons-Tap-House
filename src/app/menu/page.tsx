@@ -36,7 +36,6 @@ export default function Menu () {
   }, [width])
 
   useEffect(() => {
-    console.log("get beer")
     axios.get(`/menu/api/catalog?category=${categoryIds.onTap}`).then((res) => {
       setTapMenu(res.data);
       return;
