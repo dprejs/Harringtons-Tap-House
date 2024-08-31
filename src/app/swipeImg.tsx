@@ -11,13 +11,13 @@ const images = [
   },
   {
     label: "Stock Jackhammer Construction Worker",
-    imgPath: '/bar-photos/barTop.jpg',
+    imgPath: "/bar-photos/barTop.jpg",
     height: 300,
     width: 400,
   },
   {
     label: "Stock Construction Workers Planning",
-    imgPath: '/bar-photos/barFrame.jpg',
+    imgPath: "/bar-photos/barFrame.jpg",
     height: 400,
     width: 300,
   },
