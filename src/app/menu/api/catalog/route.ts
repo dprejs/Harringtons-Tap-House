@@ -26,7 +26,7 @@ export async function GET(req: Request) {
     }
   })
   const reqTime = Date.now()
-  console.log(`req took: ${reqTime-start}`)
+  // console.log(`req took: ${reqTime-start}`)
   const images: images  = {};
   searchRes.data.related_objects.forEach((related_object: related_object) => {
     if (related_object.type === "IMAGE") {
@@ -66,7 +66,7 @@ export async function GET(req: Request) {
       }
     })
     const filterTime = Date.now();
-    console.log(`filter took: ${filterTime - reqTime} \n total time ${filterTime - start}`)
+    // console.log(`filter took: ${filterTime - reqTime} \n total time ${filterTime - start}`)
     return Response.json({tapMenu, canMenu});
   } else {
     const parsedMenu: parsedItem[] = []
