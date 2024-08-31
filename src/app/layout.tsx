@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true} className="height-100 width-100">
       <Head>
         <title>Harrington&aposs Taphouse</title>
-        <meta name="keywords" content="beer, craft beer, bar, beer bar, taphouse, tap, harrington, harrington's, homebrew, brewery, patio"/>
+        <meta name="keywords" content="harrington's taphouse, beer, craft beer, bar, beer bar, taphouse, tap, harrington, harrington's, homebrew, brewery, patio"/>
       <meta name="description" content="Harrington's tap house website and menu"/>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
