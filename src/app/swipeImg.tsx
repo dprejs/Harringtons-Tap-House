@@ -4,6 +4,13 @@ import Image from "next/image";
 import React from "react";
 import { isMobile } from "react-device-detect";
 
+const exampleImage = {
+  label: "description of photo",
+  imgPath: "/nameOfFile.jpg", //or .jpeg o
+  height: 300, // has to be 300 or 400 to display properly on mobile,
+  width: 400, // has to be 300 or 400 to display properly on mobile,
+}
+
 const images = [
   {
     label: "Photo of bartop with finished epoxy pour",

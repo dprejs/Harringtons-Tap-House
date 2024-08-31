@@ -238,9 +238,6 @@ a {
   width: 80px;
   background-color: white;
 }
-.drawer-item {
-  /* padding: 10px; */
-}
 #aboutPage {
   height: 100vh;
   background-color: var(--primary-red);
