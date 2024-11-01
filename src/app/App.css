@@ -27,6 +27,7 @@
   flex-direction: column;
   align-items: center;
 
+
 }
 
 .body {
@@ -48,8 +49,6 @@
   color: white;
   background-color: var(--primary-blue);
 }
-.header-nav {
-}
 .header-left {
   width: 24px;
 }
@@ -59,19 +58,22 @@
 }
 .Secondary-header {
   font-family: "Alesand Extra Bold";
-  font-size: 48px;
+  font-size: 50px;
   color: white;
 }
 .Secondary-text {
   font-family: "Alesand Extra Bold";
-  font-size: large;
+  font-size: 22px;
   color: white;
 }
 .carousel {
-
-  height: 400px;
+  width: 80vw;
+  margin-bottom: 10px;
 }
-
+.carousel-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .button {
   width: 90px;
   height: 64px;
@@ -116,7 +118,6 @@ a {
   color: white;
   font-size: 50px;
   padding: 5px;
-  /* width: 100vw; */
   }
   .menuNav {
     position: sticky;
@@ -203,7 +204,6 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-content: space-between; */
 }
 .menu-description {
   text-align: start;
@@ -226,10 +226,6 @@ a {
   gap: 10px;
   overflow: hidden;
   padding: 10px;
-  /* padding-left: 10px;
-  padding-top: 10px;
-  padding-right: 10px; */
-  /* width: calc(fit-content + 20px); */
   width: fit-content;
 }
 
