@@ -66,10 +66,10 @@ export default function Home() {
             gap="0px 30px"
           >
             <Link href="/menu">
-              <button className={"button button-white " + alessEB.className}>
+              <button className={"button button-white " + alessEB.className + (screen.isMobile ? " small-button" : " large-button")}>
                 <Image src="hops_empty_pb.svg"
-                  height="40"
-                  width="40"
+                  height={screen.isMobile ? "40" : "60"}
+                  width={screen.isMobile ? "40" : "60"}
                   alt="Hops icon" />
                 <span>
                   Tap Menu
@@ -84,10 +84,10 @@ export default function Home() {
           }
             <Link href="/about">
               <button
-                className={"button button-blue " + alessEB.className}>
+                className={"button button-blue " + alessEB.className + (screen.isMobile ? " small-button" : " large-button")}>
                 <Image src="hops_empty_white.svg"
-                  height="40"
-                  width="40"
+                  height={screen.isMobile ? "40" : "60"}
+                  width={screen.isMobile ? "40" : "60"}
                   alt="Hops icon" />
                 <span>
                   About us

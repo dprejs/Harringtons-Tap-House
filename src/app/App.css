@@ -75,14 +75,23 @@
   margin-right: 5px;
 }
 .button {
-  width: 90px;
-  height: 64px;
   border-width: 2px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   appearance: none;
+  text-decoration: none;
+}
+.small-button {
+  width: 90px;
+  height: 64px;
+}
+.large-button{
+  width: 130px;
+  height: 100px;
+  font-size: 20px;
 }
 .button-white {
   background-color: white;
