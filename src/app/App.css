@@ -225,7 +225,7 @@ a {
 .drawer {
   background-color: var(--primary-blue);
   color: white;
-  font-size: larger;
+  font-size: 30px;
   font-family: "Alesand Extra Bold";
   height: 100%;
   width: 100%;
@@ -241,6 +241,8 @@ a {
 .drawer-divider {
   height: 1px;
   width: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   background-color: white;
 }
 #aboutPage {
