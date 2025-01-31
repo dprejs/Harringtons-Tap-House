@@ -64,17 +64,17 @@ export default function RootLayout({
                 onOpen={() => toggleDrawer(true)}
               >
                 <div className="drawer" >
-                  <Link href="/">
+                  <Link href="/" onClick={() => toggleDrawer(false)}>
                     Home
                   </Link>
                   <span className="drawer-divider" />
-                  <Link href="/menu">
+                  <Link href="/menu" onClick={() => toggleDrawer(false)}>
                     Tap Menu
                   </Link>
-                  <span className="drawer-divider" />
-                  <Link href="/about">
+                  {/* <span className="drawer-divider" /> */}
+                  {/* <Link href="/about">
                     About Us
-                  </Link>
+                  </Link> */}
                 </div>
               </SwipeableDrawer>
             </header>

@@ -20,10 +20,11 @@ export default function Home() {
           display="flex"
           alignItems="center"
           flexDirection="column"
+          gap={1}
         >
           {/* ################ DELETE BELOW HERE ##################### */}
           <div className={"Secondary-header " + alessEB.className}>
-            COMING SOON!
+            Now open come and grab a pint!
           </div>
           {/* ################ DELETE ABOVE HERE ##################### */}
           <div className={'Secondary-text ' + alessEB.className}>
@@ -52,11 +53,30 @@ export default function Home() {
               justifyContent="space-evenly"
               marginBottom="10px"
             >
-              <span>Tuesday - Sunday</span>
+              <span>Tuesday - Friday</span>
+              <span>|</span>
+              <span>2pm - 10pm</span>
+            </Box>
+            <Box
+              display="flex"
+              gap="0px 15px"
+              justifyContent="space-evenly"
+              marginBottom="10px"
+            >
+              <span>Saturday</span>
               <span>|</span>
               <span>12pm - 10pm</span>
             </Box>
-
+            <Box
+              display="flex"
+              gap="0px 15px"
+              justifyContent="space-evenly"
+              marginBottom="10px"
+            >
+              <span>Sunday</span>
+              <span>|</span>
+              <span>11am - 9pm</span>
+            </Box>
           </div>
           <ImgCarousel />
           <Box
@@ -78,10 +98,10 @@ export default function Home() {
 
             </Link>
             {screen.isMobile ?
-            <Image src="/Harringtons_Primary-Logo.png" alt="Harrington's Tap House primary round logo" width="100" height="100" />
-            :
-            <Image src="/Harringtons_Primary-Logo.png" alt="Harrington's Tap House primary round logo" width="200" height="200" />
-          }
+              <Image src="/Harringtons_Primary-Logo.png" alt="Harrington's Tap House primary round logo" width="100" height="100" />
+              :
+              <Image src="/Harringtons_Primary-Logo.png" alt="Harrington's Tap House primary round logo" width="200" height="200" />
+            }
             <Link href="/about">
               <button
                 className={"button button-blue " + alessEB.className + (screen.isMobile ? " small-button" : " large-button")}>
@@ -95,7 +115,7 @@ export default function Home() {
               </button>
             </Link>
           </Box>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.8208517064745!2d-111.60925912357517!3d35.21093107274278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d8f46ae8a23f5%3A0xaa750b8aa8473a43!2sHigh%20Altitude%20Home%20Brew%20Supply!5e0!3m2!1sen!2sus!4v1719878958008!5m2!1sen!2sus" height="350" style={{ border: "0" }} loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13039.836409957634!2d-111.60908713854975!3d35.20748765389516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d8f7b4277ce35%3A0x689c889f7d2cc7c5!2sHarrington&#39;s%20Tap%20House!5e0!3m2!1sen!2sus!4v1738302293455!5m2!1sen!2sus" height="350" style={{ border: "0" }} loading="lazy"></iframe>
         </Box>
       </div>
     </div>

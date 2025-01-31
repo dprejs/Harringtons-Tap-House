@@ -225,22 +225,23 @@ a {
 .drawer {
   background-color: var(--primary-blue);
   color: white;
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: bold;
   font-family: "Alesand Extra Bold";
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  gap: 10px;
+  align-items: center;
+  gap: 30px;
   overflow: hidden;
-  padding: 10px;
+  padding: 50px;
   width: fit-content;
 }
 
 .drawer-divider {
   height: 1px;
-  width: 80px;
+  width: 120px;
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: white;
