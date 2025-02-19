@@ -101,6 +101,7 @@ export type parsedItem = {
   ibu: string,
   description: string,
   img_url: string | undefined,
-  category: string
+  category: string,
+  onDeck: boolean,
 }
 export type images = {[key: string] : string | undefined}

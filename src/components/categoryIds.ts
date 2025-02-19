@@ -13,5 +13,6 @@ const categoryIds = {
   hardSeltzer: "GIHVT5Z34F4M2WOQYOTZYOJL",
   roseWine: "YUOGOV5VYMHHFDRTT34PXNDB",
   cansAndBottles: "ID46BTJ3CCCOGY42HAFBWK6J",
+  onDeck: "FFQLY6PQ3D6N3NKVNRYTKTWX",
 }
 export default categoryIds;

@@ -136,7 +136,7 @@ a {
     padding: 10px;
     display: flex;
     flex-direction: row;
-    gap:5px;
+    gap:15px 5px;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
@@ -157,6 +157,7 @@ a {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+    width: 100%;
   }
 
 @media screen and (min-width: 800px) {
@@ -164,6 +165,14 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
+.menu-sec {
+  font-size: 30px;
+}
+#OnDeck-Menu {
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 .menu-card {
   font-size: medium;

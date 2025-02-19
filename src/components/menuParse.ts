@@ -42,6 +42,10 @@ const parseItem = (item: item ,images: images): parsedItem => {
     if (item.item_data.image_ids && item.item_data.image_ids.length && images[item.item_data.image_ids[0]] ) {
       img_url = images[item.item_data.image_ids[0]];
     }
+    let onDeck = false;
+    if (item.item_data.categories.some((category) => category.id === categoryIds.onDeck)) {
+      onDeck = true;
+    }
     const menuItem = {
       id: item.id,
       name: name,
@@ -52,6 +56,7 @@ const parseItem = (item: item ,images: images): parsedItem => {
       description: description,
       img_url: img_url,
       category: menuCategory,
+      onDeck: onDeck
     }
     return menuItem;
 }

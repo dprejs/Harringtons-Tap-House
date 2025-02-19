@@ -41,6 +41,7 @@ export async function GET(req: Request) {
     if (item.item_data.visibility === "PRIVATE") {
       return;
     }
+    // Check if all variations of item are sold out
     if (item.item_data.variations.every((variation) => {
       if (variation.item_variation_data.location_overrides){
         return variation.item_variation_data.location_overrides.every((override) => override.sold_out === true)
@@ -56,10 +57,12 @@ export async function GET(req: Request) {
   if(category === categoryIds.beer) {
     const tapMenu: parsedItem[] = [];
     const canMenu: parsedItem[] = [];
+    const onDeckMenu: parsedItem[] = [];
     instock_items.forEach((item) => {
       const parsed = parseItem(item, images);
-
-      if (parsed.category === "onTap") {
+      if (parsed.onDeck) {
+        onDeckMenu.push(parsed);
+      }else if (parsed.category === "onTap" && !parsed.onDeck) {
         tapMenu.push(parsed);
       } else {
          canMenu.push(parsed);
@@ -67,7 +70,19 @@ export async function GET(req: Request) {
     })
     const filterTime = Date.now();
     // console.log(`filter took: ${filterTime - reqTime} \n total time ${filterTime - start}`)
-    return Response.json({tapMenu, canMenu});
+    return Response.json({tapMenu, canMenu, onDeckMenu});
+  } else if (category === categoryIds.onTap){
+    const onDeckMenu: parsedItem[] = [];
+    const onTapMenu: parsedItem[] = [];
+    instock_items.forEach((item) => {
+      const parsed = parseItem(item, images);
+      if (parsed.onDeck) {
+        onDeckMenu.push(parsed);
+      } else {
+        onTapMenu.push(parsed);
+      }
+    })
+    return Response.json({onTapMenu, onDeckMenu})
   } else {
     const parsedMenu: parsedItem[] = []
     instock_items.forEach((item) => {
