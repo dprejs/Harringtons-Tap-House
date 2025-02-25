@@ -7,6 +7,9 @@ import React, { useContext } from "react";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { createTheme, SwipeableDrawer, ThemeProvider } from "@mui/material";
 import ContextProvider, { ScreenContext } from "./context";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function RootLayout({
   children,
@@ -33,7 +36,7 @@ export default function RootLayout({
   });
   const screen = useContext(ScreenContext);
   return (
-    <html lang="en" suppressHydrationWarning={true} className="height-100 width-100" style={{overflowX: "hidden"}}>
+    <html lang="en" suppressHydrationWarning={true} className="height-100 width-100" style={{ overflowX: "hidden" }}>
       <Head>
         <title>Harrington&aposs Taphouse</title>
         <meta name="keywords" content="harrington's taphouse, beer, craft beer, bar, beer bar, taphouse, tap, harrington, harrington's, homebrew, brewery, patio" />
@@ -75,6 +78,18 @@ export default function RootLayout({
                   {/* <Link href="/about">
                     About Us
                   </Link> */}
+                  <span className="drawer-divider" />
+                  <div className="icons w-100">
+                    <a href="mailto: info@harringtonstaphouse.com">
+                      <EmailIcon fontSize="large" />
+                    </a>
+                    <a href="https://www.instagram.com/harringtonstaphouse/">
+                      <InstagramIcon fontSize="large" />
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61572922251178">
+                      <FacebookIcon fontSize="large" />
+                    </a>
+                  </div>
                 </div>
               </SwipeableDrawer>
             </header>

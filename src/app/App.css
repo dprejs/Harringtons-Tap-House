@@ -52,6 +52,7 @@
 .header-left {
   width: 24px;
 }
+
 .App-header img {
   margin-top: -20px;
   margin-bottom: -25px;
@@ -60,6 +61,7 @@
   font-family: "Alesand Extra Bold";
   font-size: 50px;
   color: white;
+  line-height: 40px;
 }
 .Secondary-text {
   font-family: "Alesand Extra Bold";
@@ -103,7 +105,12 @@
   color: white;
   border-color: white;
 }
-
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  gap: 20px;
+}
 .height-100 {
   height: 100%;
 }
